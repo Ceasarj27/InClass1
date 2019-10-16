@@ -27,8 +27,18 @@ public class StudentTest {
 
 	@Test
 	public void testCompareTo() throws NameException {
-		Student firstStudent = new Student("x", "Y", 2);
-		Student secondStudent = new Student("x", "Y", 3);
+		Student firstStudent = new Student("A", "B", 2);
+		Student secondStudent = new Student("A", "C", 3);
+		Student student = new Student("A", "A", 5);
+		Student empty = new Student("Z", "", 3);
+		Student secondEmpty = new Student("", "B", 3);
+		
+		CompareLastFirstName clfn = new CompareLastFirstName();
+		
+		clfn.compare(firstStudent, secondStudent);
+		
+		
+		/*
 		boolean result = false;
 		int actual = secondStudent.compareTo(firstStudent);
 		//should be bigger than zero
@@ -39,7 +49,7 @@ public class StudentTest {
 		
 		//should be less than zero
 		result = false;
-		Student student = new Student("x", "Y", 5);
+		
 		actual = secondStudent.compareTo(student);
 		if (actual < 0) 
 			result = true;
@@ -51,7 +61,7 @@ public class StudentTest {
 		Student studentSame = new Student("x", "Y", 5);
 		actual = student.compareTo(studentSame);
 		int expected = 0;
-			assertEquals(expected, actual);
+			assertEquals(expected, actual); */
 
 	}
 	
