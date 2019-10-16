@@ -1,2 +1,1 @@
-# InClass1
-InClass1
+# my-new-repo
