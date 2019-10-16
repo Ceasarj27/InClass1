@@ -37,12 +37,21 @@ public class StudentTest {
 		
 		assertTrue(result);
 		
-		Student student = new Student("x", "Y", 4);
+		//should be less than zero
+		result = false;
+		Student student = new Student("x", "Y", 5);
 		actual = secondStudent.compareTo(student);
 		if (actual < 0) 
-			result = false;
+			result = true;
 		
-		assertFalse(result);
+		assertTrue(result);
+		
+		//should be the same, therefore equal to zero
+		result = false;
+		Student studentSame = new Student("x", "Y", 5);
+		actual = student.compareTo(studentSame);
+		int expected = 0;
+			assertEquals(expected, actual);
 
 	}
 	
